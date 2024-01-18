@@ -1,0 +1,323 @@
+/* Styles de base pour les petits écrans (mobile first) */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #imgTitle {
+    padding-top: 30px;
+    font-size: 1rem;
+    padding-bottom: 30px;    
+}
+  
+    
+  .introduction {
+    padding-top: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  .introduction__title h2 {
+    font-weight: normal;
+    font-size: 2rem;
+    white-space: pre-line;
+    
+  }
+  
+  .introduction__down-title p {
+    font-size: 2.5rem;
+    color: #999;
+    font-weight: 350;
+  }
+
+.functionning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+  }
+  .fa-location-dot {
+    font-size: 25px;
+    margin-bottom: 5px;
+  }
+.function {
+  margin-right: 50%;
+  font-size: 2.5rem;
+}
+.functionning .button i {
+    color: gray; /* Ajoutez la couleur grise à vos icônes */
+}
+  .location-bar {
+    background-color: #f2f2f2;
+    border-top: 2px solid #999;
+    box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .location {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 35%;
+  }
+  
+  .location input {
+    flex: 1;  
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .location i {
+    margin-right: 10px;  
+  }
+  .button-restaurant {
+    background: linear-gradient(to bottom, #FF79DA, #9356DC);
+    border-radius: 30px;
+    border: 2px solid #999;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 50px;
+    width: 70%;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 10%;
+  }
+  .fa-mobile-alt .fa-list .fa-store {
+    color: #999;
+  }
+
+  
+  .restaurants__card a:hover .button_card {
+    display: block; /* Afficher le bouton lorsqu'on survole le lien */
+  }
+  .button_card {
+    position: relative;
+    /* Autres styles de .button_card ... */
+  }
+  
+  .New {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(95, 182, 131); /* Couleur de fond pour le span "new" (à ajuster selon vos besoins) */
+    color: green; /* Couleur du texte pour le span "new" (à ajuster selon vos besoins) */
+    padding: 5px; /* Espace intérieur pour le span "new" (à ajuster selon vos besoins) */
+    border-radius: 2px; /* Bord arrondi pour le span "new" (à ajuster selon vos besoins) */
+    display: none; /* Cacher le span "new" par défaut */
+  }
+  /* Afficher le span "new" en permanence */
+  .button_card .new {
+    display: inline-block;   
+   margin-right: 60px;
+    margin-top: 30px;
+  }
+  /* Afficher le span "new" lors du survol de l'image ou du span */
+  .restaurants__card img:hover + .button_card .new,
+  .restaurants__card span:hover + .button_card .new {
+    display: inline-block;
+  }
+  .button {
+    background-color: #f2f2f2;
+    color: black;
+    border: none;
+    padding: 2px 15px;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-left: -25px;
+    margin: 45px;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(0, 0, 0, 0.1);
+  }
+  a.button {
+    text-decoration: none;
+   
+  }
+  .button i {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .button:hover {
+    background-color: #d9d9d9;
+    text-decoration: none;
+  }
+  
+  .button:hover i {
+    color: #9356DC;
+  }
+  .restaurants__card a {
+    pointer-events: none;
+  }
+  
+  /* Activer les clics sur l'image */
+  .restaurants__card img {
+    width: 111%;
+    height: 400px;
+  }
+  
+  /* Afficher le bouton lors du survol de l'image */
+  .restaurants__card img:hover + .button_card {
+    display: block;
+  }
+  
+  .functionning__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .functionning__list--number {
+    background-color: #9356DC;
+    color: #fff;
+    font-size: 0.8rem; /* Ajustez la taille du texte selon vos besoins */
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+   margin-top: 10px;
+    margin-left: -30px; /* Ajustez cette valeur pour régler le positionnement du numéro */
+  }
+  .restaurants__card {
+    position: relative;
+    margin: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Inclure les marges et le rembourrage dans la largeur totale */
+    max-width: 600px; /* Définir une largeur maximale selon vos besoins */
+  }
+  .restaurants_image {
+    width: 91%;
+    margin-left: 35px;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+  
+  }
+  .restaurants {
+    background-color: #f2f2f2;
+    width: 100%;
+    padding-bottom: 10px;
+    overflow: hidden; /* Masquer tout contenu dépassant la taille du conteneur */
+  }
+  
+  #restaurant {
+    border-radius: 30px;
+    background-color: #f2f2f2;
+    overflow: hidden; /* Masquer tout contenu dépassant la taille du conteneur */
+  }
+  .restaurants_name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .restaurants_img {
+    
+    margin-left: 35px;
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden; /* Masquer tout contenu dépassant la taille du conteneur */
+  }
+  
+  .restaurant_descript {
+    background-color: white;
+    margin: 35px;
+    width: 111%;
+    
+    margin-bottom: 10px;
+    margin-top: 0px;
+    
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: black;
+    box-sizing: border-box;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  .subtile_card {
+    font-weight: 300;
+    margin-top: -45px;
+    padding-bottom:  20px;
+  }
+  .heart-checkbox {
+   margin-left: 45%;
+}
+
+    footer {
+      background-color: #333; /* Couleur de fond gris foncé */
+      color: white; /* Couleur du texte blanc */
+      padding: 20px; /* Ajoutez de la marge interne pour améliorer l'esthétique */
+    }
+    
+ 
+    ul {
+      list-style: none; /* Supprimez les puces de la liste */
+      padding: 0; /* Supprimez la marge intérieure de la liste */
+    }
+    
+    li {
+      margin-bottom: 10px; /* Ajoutez un espace entre chaque élément de la liste */
+    }
+    
+    a {
+      color: white; /* Couleur du texte des liens */
+      text-decoration: none; /* Supprimez la soulignement des liens */
+    }
+    
+    /* Effets au survol des liens */
+    a:hover {
+      color: white; 
+                text-decoration: none; 
+
+    }
+    
+  
+  /* Media query pour les écrans plus grands */
+  
+  @media screen and (max-width: 768px) {
+    body {
+        font-size: 18px; /* Ajuster la taille de la police pour les écrans plus grands si nécessaire */
+    }
+    
+    .introduction,
+    .location-bar,
+    .functionning {
+        font-size: 2rem; /* Ajuster la taille du texte pour les écrans plus grands si nécessaire */
+    }
+  }

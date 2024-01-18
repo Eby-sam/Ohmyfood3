@@ -1,0 +1,10 @@
+@keyframes fillHeart {
+  0% {
+    transform: scaleY(0);
+    background-size: 0% 100%; // Ajuste la taille pour éliminer le trait indésirable
+  }
+  100% {
+    transform: scaleY(1);
+    background-size: 0% 0%;
+  }
+}
