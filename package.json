@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass:dev": "sass main.scss main.css",
-    "sass:prod": "sass --no-source-map main.scss main.css",
-    "sass:watch": "sass --watch main.scss main.css"
+    "sass:dev": "sass assets/main.scss assets/main.css",
+    "sass:prod": "sass --no-source-map assets/main.scss assets/main.css",
+    "sass:watch": "sass --watch assets/main.scss assets/main.css"
   },
   "keywords": [],
   "author": "",
