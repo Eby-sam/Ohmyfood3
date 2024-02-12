@@ -85,54 +85,41 @@
             height: 50px;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 2rem;
             position: absolute;
-            left: 83%;
-            bottom: 25%;
-
-
-            .fa-regular,
-            .fa-solid {
+            left: 88%;
+            bottom: 24%;
+            position: relative; 
+          
+            .fa-regular, .fa-solid {
               position: absolute;
               top: 0;
               left: 0;
-              color: black;
+              color: black; 
             }
+          
             .fa-regular {
               z-index: 2;
             }
+             
             .fa-solid {
-              opacity: 0;
               z-index: 1;
-              background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-              -webkit-background-clip: text;
-              background-clip: text;
+              opacity: 0;
+              color: transparent; 
+              transition-property: opacity;
+              transition-duration: 2s;
+            }
+            
+            &:hover .fa-solid {
+              opacity: 1;
               color: transparent;
-              transform-origin: bottom;
-              transform: scaleY(0);
-              transition: transform 2s;
+              background-clip: text;
+              background-image: linear-gradient(#ff79da, #9356dc);
+              -webkit-background-clip: text;
             }
-
-            &:hover {
-              cursor: pointer;
-
-              .fa-regular {
-                color: #ff79da;
-                z-index: 1;
-              }
-
-              .fa-solid {
-                transform: scaleY(1);
-                opacity: 1;
-                z-index: 2;
-              }
-            }
-
-            &:active {
-              .fa-solid {
-                transform: scaleY(1);
-                animation: fillHeart 5s forwards;
-              }
+          
+            &:hover .fa-regular {
+              color: transparent; 
             }
           }
         }
@@ -232,49 +219,42 @@
 
                 .select-choix {
                   @include flex-center;
-                  background-color: #7db97d;
+                  background-color: #99e2d0;
                   color: white;
                   font-weight: bold;
-                  font-size: 1.3rem;
+                  font-size: 100%;
                   align-items: center;
                   border-radius: 0 2rem 2rem 0;
-                  width: 66px;
+                  width: 57px;
                   height: 100%;
                   margin-left: -1rem;
                   position: absolute;
-                  left: 95%;
+                  left: 93%; 
                   top: 0;
                   transform-origin: right center;
                   transform: scaleX(0);
                   transition: transform 0.5s ease-in-out;
                   cursor: pointer;
-
-                  .checkbox-input:checked ~ & {
-                    animation: returnAnimation 0.5s ease-in-out;
-                  }
-                }
-
-                .checkbox-input {
+              }
+              
+              .checkbox-input {
                   position: absolute;
                   opacity: 0;
                   height: 100%;
                   width: 100%;
                   cursor: pointer;
                   z-index: 1;
-                }
-
-                .checkbox-input:not(:checked) ~ .select-choix {
-                  animation: none;
-                  transform: scaleX(0);
-                }
-
-                .checkbox-input:checked ~ .prix {
-                  transform: translateX(-80px);
-                }
-
-                &:hover .select-choix {
+              }
+              
+              /* Applique le style de fond lorsque la case est cochée */
+              .checkbox-input:checked ~ .select-choix {
                   transform: scaleX(1);
-                }
+              }
+              
+              /* Déplace le prix vers la gauche lorsqu'il est coché */
+              .checkbox-input:checked ~ .prix {
+                  transform: translateX(-80px);
+              }
               }
             }
           }

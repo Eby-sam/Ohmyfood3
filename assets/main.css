@@ -227,11 +227,11 @@
     font-weight: bold;
     height: 49px;
     padding: 6px 20px;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   }
   body #container .title .introduction .button-restaurant:hover {
     cursor: pointer;
-    background: linear-gradient(to top, #f56cce 0%, #8b4cd8 100%);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   }
   body #container .functionning {
     display: flex;
@@ -385,10 +385,10 @@
     height: 50px;
     align-items: center;
     justify-content: center;
-    font-size: 100%;
+    font-size: 2rem;
     position: absolute;
-    left: 85%;
-    bottom: 13%;
+    left: 84%;
+    top: 83%;
   }
   body #container .restaurants .restaurants_container .restaurants__card .layout-star .fa-regular, body #container .restaurants .restaurants_container .restaurants__card .layout-star .fa-solid {
     position: absolute;
@@ -400,31 +400,21 @@
     z-index: 2;
   }
   body #container .restaurants .restaurants_container .restaurants__card .layout-star .fa-solid {
+    z-index: 1;
     opacity: 0;
-    z-index: 1;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 2s;
-  }
-  body #container .restaurants .restaurants_container .restaurants__card .layout-star:hover {
-    cursor: pointer;
-  }
-  body #container .restaurants .restaurants_container .restaurants__card .layout-star:hover .fa-regular {
-    color: #ff79da;
-    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
   }
   body #container .restaurants .restaurants_container .restaurants__card .layout-star:hover .fa-solid {
-    transform: scaleY(1);
     opacity: 1;
-    z-index: 2;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
   }
-  body #container .restaurants .restaurants_container .restaurants__card .layout-star:active .fa-solid {
-    transform: scaleY(1);
-    animation: fillHeart 5s forwards;
+  body #container .restaurants .restaurants_container .restaurants__card .layout-star:hover .fa-regular {
+    color: transparent;
   }
   body #container .restaurants .restaurants_container .button-restaurant {
     display: flex;
@@ -440,11 +430,11 @@
     font-weight: bold;
     height: 49px;
     padding: 6px 20px;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   }
   body #container .restaurants .restaurants_container .button-restaurant:hover {
     cursor: pointer;
-    background: linear-gradient(to top, #f86ed1 0%, #8c4dda 100%);
+    background: linear-gradient(to top, #8e4fdb 0%, #f86dd1 100%);
   }
   body #container footer {
     background-color: #333;
@@ -499,7 +489,6 @@
   body #container .banner .logo a #imgTitle {
     padding-top: 20px;
     padding-bottom: 10px;
-    margin-left: -14%;
     width: 57%;
     display: flex;
   }
@@ -541,14 +530,14 @@
     height: 50px;
     align-items: center;
     justify-content: center;
-    font-size: 172%;
+    font-size: 2rem;
     position: absolute;
-    left: 87%;
-    bottom: 15%;
+    left: 88%;
+    bottom: 14%;
   }
-  body #container .container .container_banner .layout-star .fa-regular,
-  body #container .container .container_banner .layout-star .fa-solid {
+  body #container .container .container_banner .layout-star .fa-regular, body #container .container .container_banner .layout-star .fa-solid {
     position: absolute;
+    top: 0;
     left: 0;
     color: black;
   }
@@ -556,31 +545,21 @@
     z-index: 2;
   }
   body #container .container .container_banner .layout-star .fa-solid {
+    z-index: 1;
     opacity: 0;
-    z-index: 1;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 2s;
-  }
-  body #container .container .container_banner .layout-star:hover {
-    cursor: pointer;
-  }
-  body #container .container .container_banner .layout-star:hover .fa-regular {
-    color: #ff96e1;
-    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
   }
   body #container .container .container_banner .layout-star:hover .fa-solid {
-    transform: scaleY(1);
     opacity: 1;
-    z-index: 2;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
   }
-  body #container .container .container_banner .layout-star:active .fa-solid {
-    transform: scaleY(1);
-    animation: fillHeart 5s forwards;
+  body #container .container .container_banner .layout-star:hover .fa-regular {
+    color: transparent;
   }
   body #container .menu {
     background-color: #f2f2f2;
@@ -622,6 +601,11 @@
     margin-top: 20px;
     display: flex;
     position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* Applique le style de fond lorsque la case est cochée */
+    /* Déplace le prix vers la gauche lorsqu'il est coché */
   }
   body #container .menu .card .menu__block .choice .choice__card:hover {
     background-color: #faf7f7;
@@ -629,7 +613,6 @@
   body #container .menu .card .menu__block .choice .choice__card .choice__card__txt {
     display: flex;
     flex-direction: column;
-    white-space: nowrap;
   }
   body #container .menu .card .menu__block .choice .choice__card .choice__card__txt .choice__card__txt--title {
     font-size: 100%;
@@ -658,14 +641,14 @@
     cursor: pointer;
     transform: scaleX(1);
   }
-  .checkbox-input:checked ~ .select-choix body #container .menu .card .menu__block .choice .choice__card .prix {
-    transform: translateX(-80px);
+  .checkbox-input:checked ~ body #container .menu .card .menu__block .choice .choice__card .prix {
+    transform: translateX(calc(-100% - 80px)); /* Ajuste la valeur du décalage */
   }
   body #container .menu .card .menu__block .choice .choice__card .select-choix {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7db97d;
+    background-color: #99e2d0;
     color: white;
     font-weight: bold;
     font-size: 100%;
@@ -675,15 +658,12 @@
     height: 100%;
     margin-left: -1rem;
     position: absolute;
-    left: 94%;
+    left: 93%;
     top: 0;
     transform-origin: right center;
     transform: scaleX(0);
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
-  }
-  .checkbox-input:checked ~ body #container .menu .card .menu__block .choice .choice__card .select-choix {
-    animation: returnAnimation 0.5s ease-in-out;
   }
   body #container .menu .card .menu__block .choice .choice__card .checkbox-input {
     position: absolute;
@@ -693,16 +673,29 @@
     cursor: pointer;
     z-index: 1;
   }
-  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:not(:checked) ~ .select-choix {
-    animation: none;
-    transform: scaleX(0);
+  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:checked ~ .select-choix {
+    transform: scaleX(1);
   }
   body #container .menu .card .menu__block .choice .choice__card .checkbox-input:checked ~ .prix {
     transform: translateX(-80px);
   }
-  body #container .menu .card .menu__block .choice .choice__card:hover .select-choix {
-    transform: scaleX(1);
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  body #container .menu .card .menu__block .choice .choice__card .select-choix {
+    left: 89%;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  body #container .menu .card .menu__block .choice .choice__card .select-choix {
+    left: 95%;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 576px) {
+  body #container .menu .card .menu__block .choice .choice__card .select-choix {
+    left: 92%;
+  }
+}
+@media screen and (max-width: 768px) {
   body #container .menu .button-restaurant {
     display: flex;
     justify-content: center;
@@ -716,14 +709,12 @@
     color: white;
     font-weight: bold;
     height: 55px;
-    padding: 6px 20px;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
     position: relative;
     top: -44px;
   }
   body #container .menu .button-restaurant:hover {
-    cursor: pointer;
-    background: linear-gradient(to top, #fc6fd4 0%, #8f50dd 100%);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
   }
   body #container footer {
     background-color: #333;
@@ -822,12 +813,12 @@
     font-weight: bold;
     height: 55px;
     padding: 6px 20px;
-    background: linear-gradient(#ff79da, #9356dc);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
     transition: 100ms;
   }
   body #container .title .introduction .button-restaurant:hover {
     cursor: pointer;
-    background: linear-gradient(#fd6dd4, #8e4edb);
+    background: linear-gradient(to top, #8e4fdb 0%, #f86dd1 100%);
   }
   body #container .functionning h2 {
     font-size: 150%;
@@ -868,13 +859,12 @@
     text-decoration-line: none;
     white-space: nowrap;
   }
-  body #container .functionning ul li .button:hover {
-    cursor: pointer;
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
+  body #container .functionning ul li .button i {
+    color: #9356DC;
+    font-size: 1.1rem;
   }
-  body #container .functionning ul li .button:hover i {
-    color: #9356DC; /* Changement de couleur de l'élément <i> au survol */
-    font-size: 90%;
+  body #container .functionning ul li .button i:hover {
+    cursor: pointer;
   }
   body #container .functionning ul li .button .functionning__list--number {
     background-color: #9356DC;
@@ -976,13 +966,13 @@
     height: 50px;
     align-items: center;
     justify-content: center;
-    font-size: 160%;
+    font-size: 2rem;
     position: absolute;
     left: 88%;
-    bottom: 16%;
+    bottom: 24%;
+    position: relative;
   }
-  body #container .restaurants .restaurants_container .restaurants__card .layout-star .fa-regular,
-  body #container .restaurants .restaurants_container .restaurants__card .layout-star .fa-solid {
+  body #container .restaurants .restaurants_container .restaurants__card .layout-star .fa-regular, body #container .restaurants .restaurants_container .restaurants__card .layout-star .fa-solid {
     position: absolute;
     top: 0;
     left: 0;
@@ -992,31 +982,21 @@
     z-index: 2;
   }
   body #container .restaurants .restaurants_container .restaurants__card .layout-star .fa-solid {
+    z-index: 1;
     opacity: 0;
-    z-index: 1;
-    background: linear-gradient(#ff79da, #9356dc);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 2s;
-  }
-  body #container .restaurants .restaurants_container .restaurants__card .layout-star:hover {
-    cursor: pointer;
-  }
-  body #container .restaurants .restaurants_container .restaurants__card .layout-star:hover .fa-regular {
-    color: #ff79da;
-    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
   }
   body #container .restaurants .restaurants_container .restaurants__card .layout-star:hover .fa-solid {
-    transform: scaleY(1);
     opacity: 1;
-    z-index: 2;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
   }
-  body #container .restaurants .restaurants_container .restaurants__card .layout-star:active .fa-solid {
-    transform: scaleY(1);
-    animation: fillHeart 10s forwards;
+  body #container .restaurants .restaurants_container .restaurants__card .layout-star:hover .fa-regular {
+    color: transparent;
   }
   body #container footer {
     background-color: #333;
@@ -1132,13 +1112,12 @@
     height: 50px;
     align-items: center;
     justify-content: center;
-    font-size: 170%;
+    font-size: 2rem;
     position: absolute;
     left: 88%;
-    bottom: 17%;
+    bottom: 14%;
   }
-  body #container .container .container_banner .layout-star .fa-regular,
-  body #container .container .container_banner .layout-star .fa-solid {
+  body #container .container .container_banner .layout-star .fa-regular, body #container .container .container_banner .layout-star .fa-solid {
     position: absolute;
     top: 0;
     left: 0;
@@ -1148,31 +1127,21 @@
     z-index: 2;
   }
   body #container .container .container_banner .layout-star .fa-solid {
+    z-index: 1;
     opacity: 0;
-    z-index: 1;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 2s;
-  }
-  body #container .container .container_banner .layout-star:hover {
-    cursor: pointer;
-  }
-  body #container .container .container_banner .layout-star:hover .fa-regular {
-    color: #ff96e1;
-    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
   }
   body #container .container .container_banner .layout-star:hover .fa-solid {
-    transform: scaleY(1);
     opacity: 1;
-    z-index: 2;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
   }
-  body #container .container .container_banner .layout-star:active .fa-solid {
-    transform: scaleY(1);
-    animation: fillHeart 5s forwards;
+  body #container .container .container_banner .layout-star:hover .fa-regular {
+    color: transparent;
   }
   body #container .menu {
     background-color: #f2f2f2;
@@ -1216,6 +1185,7 @@
     display: flex;
     position: relative;
     left: 61px;
+    /* Applique le style de fond lorsque la case est cochée */
   }
   body #container .menu .card .menu__block .choice .choice__card .choice__card__txt {
     display: flex;
@@ -1241,31 +1211,30 @@
     align-items: center;
     font-weight: bold;
     padding: 0 0.5rem 0.5rem 0;
-    transition: transform 0.3s;
+    transition: transform 0.9s;
     margin-left: auto;
-    margin-right: 0;
     transform-origin: left center;
   }
   body #container .menu .card .menu__block .choice .choice__card .prix:hover {
     cursor: pointer;
     transform: scaleX(1);
   }
-  .checkbox-input:checked ~ .select-choix body #container .menu .card .menu__block .choice .choice__card .prix {
-    transform: translateX(-80px);
+  .checkbox-input:checked ~ body #container .menu .card .menu__block .choice .choice__card .prix {
+    transform: translateX(calc(-100% - 80px)); /* Ajuste la valeur du décalage */
   }
   body #container .menu .card .menu__block .choice .choice__card .select-choix {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7db97d;
+    background-color: #99e2d0;
     color: white;
     font-weight: bold;
     font-size: 100%;
     align-items: center;
     border-radius: 0 2rem 2rem 0;
-    width: 66px;
+    width: 57px;
     height: 100%;
-    margin-left: -2rem;
+    margin-left: -1rem;
     position: absolute;
     left: 93%;
     top: 0;
@@ -1275,7 +1244,7 @@
     cursor: pointer;
   }
   .checkbox-input:checked ~ body #container .menu .card .menu__block .choice .choice__card .select-choix {
-    animation: returnAnimation 0.5s ease-in-out;
+    transform: translateX(-80px);
   }
   body #container .menu .card .menu__block .choice .choice__card .checkbox-input {
     position: absolute;
@@ -1285,14 +1254,7 @@
     cursor: pointer;
     z-index: 1;
   }
-  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:not(:checked) ~ .select-choix {
-    animation: none;
-    transform: scaleX(0);
-  }
-  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:checked ~ .prix {
-    transform: translateX(-80px);
-  }
-  body #container .menu .card .menu__block .choice .choice__card:hover .select-choix {
+  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:checked ~ .select-choix {
     transform: scaleX(1);
   }
   body #container .menu .button-restaurant {
@@ -1309,13 +1271,13 @@
     font-weight: bold;
     height: 55px;
     padding: 6px 20px;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
     position: relative;
     top: -44px;
   }
   body #container .menu .button-restaurant:hover {
     cursor: pointer;
-    background: linear-gradient(to top, #fc6dd3 0%, #9050dd 100%);
+    background: linear-gradient(to top, #8e4fdb 0%, #f86dd1 100%);
   }
   body #container footer {
     background-color: #333;
@@ -1427,12 +1389,12 @@
     font-weight: bold;
     height: 55px;
     padding: 6px 20px;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
     transition: 100ms;
   }
   body #container .title .introduction .button-restaurant:hover {
     cursor: pointer;
-    background: linear-gradient(to top, #fc6ed3 0%, #8c4ed8 100%);
+    background: linear-gradient(to top, #8c4dda 0%, #f86dd1 100%);
   }
   body #container .functionning h2 {
     font-size: 2rem;
@@ -1468,17 +1430,14 @@
     box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.75);
     justify-content: space-between;
     margin-right: 10px;
+    white-space: nowrap;
   }
-  body #container .functionning ul li .button:hover {
-    cursor: pointer;
-    transform: scale(1.02);
-    box-shadow: 0 3px 10px #9356DC;
-    transition: 0.5s;
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
-  }
-  body #container .functionning ul li .button:hover i {
+  body #container .functionning ul li .button i {
     color: #9356DC;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  body #container .functionning ul li .button i:hover {
+    cursor: pointer;
   }
   body #container .functionning ul li .button .functionning__list--number {
     background-color: #9356DC;
@@ -1582,8 +1541,8 @@
     justify-content: center;
     font-size: 2rem;
     position: absolute;
-    left: 88%;
-    bottom: 10%;
+    left: 83%;
+    bottom: 13%;
   }
   body #container .restaurants .restaurants_container .layout-star .fa-regular, body #container .restaurants .restaurants_container .layout-star .fa-solid {
     position: absolute;
@@ -1595,31 +1554,21 @@
     z-index: 2;
   }
   body #container .restaurants .restaurants_container .layout-star .fa-solid {
+    z-index: 1;
     opacity: 0;
-    z-index: 1;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 2s;
-  }
-  body #container .restaurants .restaurants_container .layout-star:hover {
-    cursor: pointer;
-  }
-  body #container .restaurants .restaurants_container .layout-star:hover .fa-regular {
-    color: #ff79da;
-    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
   }
   body #container .restaurants .restaurants_container .layout-star:hover .fa-solid {
-    transform: scaleY(1);
     opacity: 1;
-    z-index: 2;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
   }
-  body #container .restaurants .restaurants_container .layout-star:active .fa-solid {
-    transform: scaleY(1);
-    animation: fillHeart 10s forwards;
+  body #container .restaurants .restaurants_container .layout-star:hover .fa-regular {
+    color: transparent;
   }
   body #container footer {
     background-color: #333;
@@ -1736,10 +1685,9 @@
     font-size: 2.5rem;
     position: absolute;
     left: 83%;
-    bottom: 25%;
+    bottom: 24%;
   }
-  body #container .container .container_banner .layout-star .fa-regular,
-  body #container .container .container_banner .layout-star .fa-solid {
+  body #container .container .container_banner .layout-star .fa-regular, body #container .container .container_banner .layout-star .fa-solid {
     position: absolute;
     top: 0;
     left: 0;
@@ -1749,31 +1697,21 @@
     z-index: 2;
   }
   body #container .container .container_banner .layout-star .fa-solid {
+    z-index: 1;
     opacity: 0;
-    z-index: 1;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 2s;
-  }
-  body #container .container .container_banner .layout-star:hover {
-    cursor: pointer;
-  }
-  body #container .container .container_banner .layout-star:hover .fa-regular {
-    color: #ff96e1;
-    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
   }
   body #container .container .container_banner .layout-star:hover .fa-solid {
-    transform: scaleY(1);
     opacity: 1;
-    z-index: 2;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
   }
-  body #container .container .container_banner .layout-star:active .fa-solid {
-    transform: scaleY(1);
-    animation: fillHeart 5s forwards;
+  body #container .container .container_banner .layout-star:hover .fa-regular {
+    color: transparent;
   }
   body #container .menu {
     background-color: #f2f2f2;
@@ -1813,10 +1751,15 @@
     width: 80%;
     background-color: white;
     border-radius: 30px;
-    margin-top: 20px;
+    margin-top: 21px;
     display: flex;
     position: relative;
-    left: 99px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 8%;
+    /* Applique le style de fond lorsque la case est cochée */
+    /* Déplace le prix vers la gauche lorsqu'il est coché */
   }
   body #container .menu .card .menu__block .choice .choice__card:hover {
     background-color: #faf7f7;
@@ -1824,17 +1767,16 @@
   body #container .menu .card .menu__block .choice .choice__card .choice__card__txt {
     display: flex;
     flex-direction: column;
-    white-space: nowrap;
   }
   body #container .menu .card .menu__block .choice .choice__card .choice__card__txt .choice__card__txt--title {
-    font-size: 1.5rem;
+    font-size: 100%;
     font-weight: bold;
     margin-right: auto;
     margin-left: 50px;
   }
   body #container .menu .card .menu__block .choice .choice__card .choice__card__txt .choice__card__txt--description {
     font-weight: 300;
-    font-size: 1.3rem;
+    font-size: 100%;
     margin-right: auto;
     margin-left: 50px;
     margin-top: -15px;
@@ -1845,33 +1787,32 @@
     align-items: center;
     font-weight: bold;
     padding: 0 0.5rem 0.5rem 0;
-    transition: transform 0.3s;
+    transition: transform 0.9s;
     margin-left: auto;
-    margin-right: 0;
     transform-origin: left center;
   }
   body #container .menu .card .menu__block .choice .choice__card .prix:hover {
     cursor: pointer;
     transform: scaleX(1);
   }
-  .checkbox-input:checked ~ .select-choix body #container .menu .card .menu__block .choice .choice__card .prix {
-    transform: translateX(-80px);
+  .checkbox-input:checked ~ body #container .menu .card .menu__block .choice .choice__card .prix {
+    transform: translateX(calc(-100% - 80px)); /* Ajuste la valeur du décalage */
   }
   body #container .menu .card .menu__block .choice .choice__card .select-choix {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7db97d;
+    background-color: #99e2d0;
     color: white;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 100%;
     align-items: center;
     border-radius: 0 2rem 2rem 0;
-    width: 66px;
+    width: 57px;
     height: 100%;
     margin-left: -1rem;
     position: absolute;
-    left: 95%;
+    left: 97%;
     top: 0;
     transform-origin: right center;
     transform: scaleX(0);
@@ -1879,7 +1820,7 @@
     cursor: pointer;
   }
   .checkbox-input:checked ~ body #container .menu .card .menu__block .choice .choice__card .select-choix {
-    animation: returnAnimation 0.5s ease-in-out;
+    transform: translateX(-80px);
   }
   body #container .menu .card .menu__block .choice .choice__card .checkbox-input {
     position: absolute;
@@ -1889,16 +1830,24 @@
     cursor: pointer;
     z-index: 1;
   }
-  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:not(:checked) ~ .select-choix {
-    animation: none;
-    transform: scaleX(0);
+  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:checked ~ .select-choix {
+    transform: scaleX(1);
   }
   body #container .menu .card .menu__block .choice .choice__card .checkbox-input:checked ~ .prix {
     transform: translateX(-80px);
   }
-  body #container .menu .card .menu__block .choice .choice__card:hover .select-choix {
-    transform: scaleX(1);
+}
+@media screen and (min-width: 1025px) and (max-width: 768px) {
+  body #container .menu .card .menu__block .choice .choice__card .select-choix {
+    left: 89%;
   }
+}
+@media screen and (min-width: 1025px) and (max-width: 576px) {
+  body #container .menu .card .menu__block .choice .choice__card .select-choix {
+    left: 92%;
+  }
+}
+@media screen and (min-width: 1025px) {
   body #container .menu .button-restaurant {
     display: flex;
     justify-content: center;
@@ -1913,13 +1862,13 @@
     font-weight: bold;
     height: 55px;
     padding: 6px 20px;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+    background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
     position: relative;
     top: -44px;
   }
   body #container .menu .button-restaurant:hover {
     cursor: pointer;
-    background: linear-gradient(to top, #fa6cd2 0%, #8b4dd8 100%);
+    background: linear-gradient(to top, #8e4fdb 0%, #f86dd1 100%);
   }
   body #container footer {
     background-color: #333;
@@ -2024,13 +1973,13 @@
     height: 50px;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     position: absolute;
-    left: 83%;
-    bottom: 25%;
+    left: 88%;
+    bottom: 24%;
+    position: relative;
   }
-  body #container .container .container_banner .layout-star .fa-regular,
-  body #container .container .container_banner .layout-star .fa-solid {
+  body #container .container .container_banner .layout-star .fa-regular, body #container .container .container_banner .layout-star .fa-solid {
     position: absolute;
     top: 0;
     left: 0;
@@ -2040,31 +1989,21 @@
     z-index: 2;
   }
   body #container .container .container_banner .layout-star .fa-solid {
+    z-index: 1;
     opacity: 0;
-    z-index: 1;
-    background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    transform-origin: bottom;
-    transform: scaleY(0);
-    transition: transform 2s;
-  }
-  body #container .container .container_banner .layout-star:hover {
-    cursor: pointer;
-  }
-  body #container .container .container_banner .layout-star:hover .fa-regular {
-    color: #ff79da;
-    z-index: 1;
+    transition-property: opacity;
+    transition-duration: 2s;
   }
   body #container .container .container_banner .layout-star:hover .fa-solid {
-    transform: scaleY(1);
     opacity: 1;
-    z-index: 2;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    -webkit-background-clip: text;
   }
-  body #container .container .container_banner .layout-star:active .fa-solid {
-    transform: scaleY(1);
-    animation: fillHeart 5s forwards;
+  body #container .container .container_banner .layout-star:hover .fa-regular {
+    color: transparent;
   }
   body #container .menu {
     background-color: #f2f2f2;
@@ -2108,6 +2047,8 @@
     display: flex;
     position: relative;
     left: 99px;
+    /* Applique le style de fond lorsque la case est cochée */
+    /* Déplace le prix vers la gauche lorsqu'il est coché */
   }
   body #container .menu .card .menu__block .choice .choice__card:hover {
     background-color: #faf7f7;
@@ -2152,25 +2093,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7db97d;
+    background-color: #99e2d0;
     color: white;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 100%;
     align-items: center;
     border-radius: 0 2rem 2rem 0;
-    width: 66px;
+    width: 57px;
     height: 100%;
     margin-left: -1rem;
     position: absolute;
-    left: 95%;
+    left: 93%;
     top: 0;
     transform-origin: right center;
     transform: scaleX(0);
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
-  }
-  .checkbox-input:checked ~ body #container .menu .card .menu__block .choice .choice__card .select-choix {
-    animation: returnAnimation 0.5s ease-in-out;
   }
   body #container .menu .card .menu__block .choice .choice__card .checkbox-input {
     position: absolute;
@@ -2180,15 +2118,11 @@
     cursor: pointer;
     z-index: 1;
   }
-  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:not(:checked) ~ .select-choix {
-    animation: none;
-    transform: scaleX(0);
+  body #container .menu .card .menu__block .choice .choice__card .checkbox-input:checked ~ .select-choix {
+    transform: scaleX(1);
   }
   body #container .menu .card .menu__block .choice .choice__card .checkbox-input:checked ~ .prix {
     transform: translateX(-80px);
-  }
-  body #container .menu .card .menu__block .choice .choice__card:hover .select-choix {
-    transform: scaleX(1);
   }
   body #container .menu .button-restaurant {
     display: flex;

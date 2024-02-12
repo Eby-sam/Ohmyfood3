@@ -93,58 +93,41 @@ body {
           height: 50px;
           align-items: center;
           justify-content: center;
-          font-size: 170%;
+          font-size: 2rem;
           position: absolute;
           left: 88%;
-          bottom: 17%;
-
-          .fa-regular,
-          .fa-solid {
+          bottom: 14%;
+          
+          .fa-regular, .fa-solid {
             position: absolute;
             top: 0;
             left: 0;
-            color: black;
+            color: black; 
           }
-
+        
           .fa-regular {
-            z-index: 2; // Place le cœur vide au-dessus du cœur plein
+            z-index: 2;
           }
-
-
+           
           .fa-solid {
-            opacity: 0;
             z-index: 1;
-            background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
+            opacity: 0;
+            color: transparent; 
+            transition-property: opacity;
+            transition-duration: 2s;
+          }
+          
+          &:hover .fa-solid {
+            opacity: 1;
             color: transparent;
-            transform-origin: bottom; // Ajuste l'origine de la transformation pour démarrer du bas
-            transform: scaleY(0); // Initialise le cœur vide
-            transition: transform 2s;
+            background-clip: text;
+            background-image: linear-gradient(#ff79da, #9356dc);
+            -webkit-background-clip: text;
           }
-
-          &:hover {
-            cursor: pointer;
-
-            .fa-regular {
-              color: #ff96e1;
-              z-index: 1; // Assuren que le coeur vide reste en dessous lors du survol
-            }
-
-            .fa-solid {
-              transform: scaleY(1);
-              opacity: 1;
-              z-index: 2; // Assure que le coeur animé reste au-dessus lors du survol
-            }
+        
+          &:hover .fa-regular {
+            color: transparent; 
           }
-
-          &:active {
-            .fa-solid {
-              transform: scaleY(1);
-              animation: fillHeart 5s forwards; // Ajoute l'animation au clic
-            }
-          }
-
         }
       }
 
@@ -193,7 +176,7 @@ body {
 
           .choice {
             margin-bottom: 92px;
-
+          
             .choice__card {
               width: 85%;
               background-color: white;
@@ -202,23 +185,23 @@ body {
               display: flex;
               position: relative;
               left: 61px;
-
+          
               &:hover {
-
+          
               }
-
+          
               .choice__card__txt {
                 display: flex;
                 flex-direction: column;
                 white-space: nowrap;
-
+          
                 .choice__card__txt--title {
                   font-size: 100%;
                   font-weight: bold;
                   margin-right: auto;
                   margin-left: 50px;
                 }
-
+          
                 .choice__card__txt--description {
                   font-weight: 300;
                   font-size: 100%;
@@ -227,50 +210,49 @@ body {
                   margin-top: -15px;
                 }
               }
-
+          
               .prix {
                 @include flex-center;
                 font-weight: bold;
                 padding: 0 0.5rem 0.5rem 0;
-                transition: transform 0.3s;
+                transition: transform 0.9s;
                 margin-left: auto;
-                margin-right: 0;
                 transform-origin: left center;
-
+              
                 &:hover {
                   cursor: pointer;
                   transform: scaleX(1);
                 }
-
-                .checkbox-input:checked ~ .select-choix & {
-                  transform: translateX(-80px); // Ajuste la valeur selon vos besoins
+          
+                .checkbox-input:checked ~ & {
+                  transform: translateX(calc(-100% - 80px)); /* Ajuste la valeur du décalage */
                 }
               }
-
+              
               .select-choix {
                 @include flex-center;
-                background-color: #7db97d;
+                background-color: #99e2d0;
                 color: white;
                 font-weight: bold;
                 font-size: 100%;
                 align-items: center;
                 border-radius: 0 2rem 2rem 0;
-                width: 66px;
+                width: 57px;
                 height: 100%;
-                margin-left: -2rem;
+                margin-left: -1rem;
                 position: absolute;
-                left: 93%;
+                left: 93%; // Ajuste cette valeur si nécessaire
                 top: 0;
                 transform-origin: right center;
                 transform: scaleX(0);
                 transition: transform 0.5s ease-in-out;
                 cursor: pointer;
-
+          
                 .checkbox-input:checked ~ & {
-                  animation: returnAnimation 0.5s ease-in-out;
+                  transform: translateX(-80px);
                 }
               }
-
+              
               .checkbox-input {
                 position: absolute;
                 opacity: 0;
@@ -279,22 +261,14 @@ body {
                 cursor: pointer;
                 z-index: 1;
               }
-
-              .checkbox-input:not(:checked) ~ .select-choix {
-                animation: none;
-                transform: scaleX(0);
-              }
-
-              .checkbox-input:checked ~ .prix {
-                transform: translateX(-80px); 
-              }
-
-              &:hover .select-choix {
+              
+              /* Applique le style de fond lorsque la case est cochée */
+              .checkbox-input:checked ~ .select-choix {
                 transform: scaleX(1);
               }
             }
-
           }
+          
         }
 
       }
@@ -315,13 +289,14 @@ body {
         font-weight: bold;
         height: 55px;
         padding: 6px 20px;
-        background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+        background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
         position: relative;
         top: -44px;
 
         &:hover {
           cursor: pointer;
-          background: linear-gradient(to top, #fc6dd3 0%, #9050dd 100%);
+         
+          background: linear-gradient(to top, #8e4fdb 0%, #f86dd1 100%);
         }
       }
     }

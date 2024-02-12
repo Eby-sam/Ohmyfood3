@@ -97,11 +97,11 @@
             font-weight: bold;
             height: 49px;
             padding: 6px 20px;
-            background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+            background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
 
             &:hover {
               cursor: pointer;
-              background: linear-gradient(to top, #f56cce 0%, #8b4cd8 100%);
+              background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
             }
           }
         }
@@ -291,55 +291,40 @@
               height: 50px;
               align-items: center;
               justify-content: center;
-              font-size: 100%;
+              font-size: 2rem;
               position: absolute;
-              left: 85%;
-              bottom: 13%;
-
+              left: 84%;
+              top: 83%;
+            
               .fa-regular, .fa-solid {
                 position: absolute;
                 top: 0;
                 left: 0;
-                color: black;
-
+                color: black; 
               }
-
+            
               .fa-regular {
                 z-index: 2;
               }
-
+               
               .fa-solid {
-                opacity: 0;
                 z-index: 1;
-                background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
-                -webkit-background-clip: text;
-                background-clip: text;
+                opacity: 0;
+                color: transparent; 
+                transition-property: opacity;
+                transition-duration: 2s;
+              }
+              
+              &:hover .fa-solid {
+                opacity: 1;
                 color: transparent;
-                transform-origin: bottom;
-                transform: scaleY(0);
-                transition: transform 2s;
+                background-clip: text;
+                background-image: linear-gradient(#ff79da, #9356dc);
+                -webkit-background-clip: text;
               }
-
-              &:hover {
-                cursor: pointer;
-
-                .fa-regular {
-                  color: #ff79da;
-                  z-index: 1;
-                }
-
-                .fa-solid {
-                  transform: scaleY(1);
-                  opacity: 1;
-                  z-index: 2;
-                }
-              }
-
-              &:active {
-                .fa-solid {
-                  transform: scaleY(1);
-                  animation: fillHeart 5s forwards;
-                }
+            
+              &:hover .fa-regular {
+                color: transparent; 
               }
             }
 
@@ -359,12 +344,13 @@
             font-weight: bold;
             height: 49px;
             padding: 6px 20px;
-            background: linear-gradient(to top, #ff79da 0%, #9356dc 100%);
+            background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
 
             &:hover {
               cursor: pointer;
               
-              background: linear-gradient(to top, #f86ed1 0%, #8c4dda 100%);
+          
+              background: linear-gradient(to top, #8e4fdb 0%, #f86dd1 100%);
    
             }
           }

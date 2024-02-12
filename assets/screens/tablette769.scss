@@ -90,12 +90,13 @@
             font-weight: bold;
             height: 55px;
             padding: 6px 20px;
-            background: linear-gradient(#ff79da, #9356dc);
+            background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
             transition: 100ms;
 
             &:hover {
               cursor: pointer;
-              background: linear-gradient(#fd6dd4, #8e4edb);
+
+              background: linear-gradient(to top, #8e4fdb 0%, #f86dd1 100%);
             }
           }
 
@@ -145,19 +146,15 @@
               margin-right: 0;
               text-decoration-line: none;
               white-space: nowrap;
-
-              &:hover {
-                cursor: pointer;
-            
-          
-              
-                box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.75);
-
-                i {
-                  color: #9356DC; /* Changement de couleur de l'élément <i> au survol */
-                  font-size: 90%;
-                }
+              i {
+                color: #9356DC;
+                font-size: 1.1rem;
+                &:hover {
+                  cursor: pointer;
               }
+            }
+            
+            
 
               .functionning__list--number {
                 background-color: #9356DC;
@@ -286,56 +283,41 @@
               height: 50px;
               align-items: center;
               justify-content: center;
-              font-size: 160%;
+              font-size: 2rem;
               position: absolute;
               left: 88%;
-              bottom: 16%;
-
-              .fa-regular,
-              .fa-solid {
+              bottom: 24%;
+              position: relative; 
+            
+              .fa-regular, .fa-solid {
                 position: absolute;
                 top: 0;
                 left: 0;
-                color: black;
+                color: black; 
               }
-
+            
               .fa-regular {
-                z-index: 2; // Place le cœur vide au-dessus du cœur plein
+                z-index: 2;
               }
-
-
+               
               .fa-solid {
-                opacity: 0;
                 z-index: 1;
-                background: linear-gradient(#ff79da, #9356dc);
-                -webkit-background-clip: text;
-                background-clip: text;
+                opacity: 0;
+                color: transparent; 
+                transition-property: opacity;
+                transition-duration: 2s;
+              }
+              
+              &:hover .fa-solid {
+                opacity: 1;
                 color: transparent;
-                transform-origin: bottom; // Ajuste l'origine de la transformation pour démarrer du bas
-                transform: scaleY(0); // Initialise le cœur vide
-                transition: transform 2s;
+                background-clip: text;
+                background-image: linear-gradient(#ff79da, #9356dc);
+                -webkit-background-clip: text;
               }
-
-              &:hover {
-                cursor: pointer;
-
-                .fa-regular {
-                  color: #ff79da;
-                  z-index: 1; // Assuren que le coeur vide reste en dessous lors du survol
-                }
-
-                .fa-solid {
-                  transform: scaleY(1);
-                  opacity: 1;
-                  z-index: 2; // Assure que le coeur animé reste au-dessus lors du survol
-                }
-              }
-
-              &:active {
-                .fa-solid {
-                  transform: scaleY(1);
-                  animation: fillHeart 10s forwards; // Ajoute l'animation au clic
-                }
+            
+              &:hover .fa-regular {
+                color: transparent; 
               }
             }
 
