@@ -11,7 +11,7 @@ body {
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: space-between;
+    
 
 
       .banner_arrow {
@@ -37,11 +37,11 @@ body {
 
         a {
           #imgTitle {
-            padding-top: 57px;
+            padding-top: 9px;
             font-size: 100%;
             display: flex;
-            margin-left: -81%;
-            margin-top: -46px;
+            margin-left: 30%;
+            margin-bottom: 5px;
           }
         }
       }
@@ -239,7 +239,6 @@ body {
                 border-radius: 0 2rem 2rem 0;
                 width: 57px;
                 height: 100%;
-                margin-left: -1rem;
                 position: absolute;
                 left: 93%; // Ajuste cette valeur si nécessaire
                 top: 0;
@@ -252,6 +251,32 @@ body {
                   transform: translateX(-80px);
                 }
               }
+
+              /* Applique le style de fond lorsque la case est cochée */
+              .checkbox-input:checked ~ .select-choix {
+                transform: scaleX(1);
+            }
+            
+            /* Déplace le prix vers la gauche lorsqu'il est coché */
+            .checkbox-input:checked ~ .prix {
+                transform: translateX(-80px);
+            }
+            
+            @media (max-width: 768px) {
+                .select-choix {
+                    left: 89%;
+                }
+            }
+            @media (max-width: 768px) {
+              .select-choix {
+                  left: 95%;
+              }
+          }
+            @media (max-width: 576px) {
+                .select-choix {
+                    left: 92%;
+                }
+            }
               
               .checkbox-input {
                 position: absolute;
@@ -328,8 +353,9 @@ body {
         padding-right: 42px;
         order: 1;
         flex-direction: row;
-        margin-top: 8px;
-        margin-left: 111px;
+        margin-top: 13px;
+        font-size: 82%;
+      
 
         li {
           a {

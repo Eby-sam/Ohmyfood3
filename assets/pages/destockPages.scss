@@ -231,13 +231,13 @@
                       color: white;
                       font-weight: bold;
                       font-size: 100%;
-                      align-items: center;
+                      
                       border-radius: 0 2rem 2rem 0;
                       width: 57px;
                       height: 100%;
-                      margin-left: -1rem;
+                      margin-left: -2rem;
                       position: absolute;
-                      left: 97%; // Ajuste cette valeur si nécessaire
+                      left: 98%; // Ajuste cette valeur si nécessaire
                       top: 0;
                       transform-origin: right center;
                       transform: scaleX(0);
@@ -321,7 +321,8 @@
           order: 2;
           font-family: 'Shrikhand', cursive; /* Utilisation de la police Shrikhand */
           font-style: italic; /* Style italic */
-          margin-right: 76px;
+          position: relative;
+          right: 5%;
 
           a {
             color: white;
@@ -335,9 +336,13 @@
         ul {
           list-style: none;
           display: flex;
-          padding-right: 17px;
+          padding-right: 0;
           order: 1;
-
+          padding-right: 0;
+          order: 1;
+          position: relative;
+          right: 10%;
+      
           li {
             a {
               color: white;
