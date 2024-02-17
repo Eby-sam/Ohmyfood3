@@ -168,19 +168,18 @@
             }
 
             .choice {
-              margin-bottom: 92px;
+              margin-bottom: 32px;
           
               .choice__card {
                 width: 80%;
                 background-color: white;
-                border-radius: 30px;
+                border-radius: 20px;
                 margin-top: 21px;
                 display: flex;
                 position: relative;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-               
                 margin-left: 8%;
           
                   &:hover {
@@ -232,7 +231,7 @@
                       font-weight: bold;
                       font-size: 100%;
                       
-                      border-radius: 0 2rem 2rem 0;
+                      border-radius: 0 10px 10px 0;
                       width: 57px;
                       height: 100%;
                       margin-left: -2rem;
@@ -301,7 +300,7 @@
           padding: 6px 20px;
           background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
           position: relative;
-          top: -44px;
+          top: -16px;
 
           &:hover {
             cursor: pointer;
@@ -315,6 +314,7 @@
         color: white;
         font-family: "Roboto", sans-serif;
         width: auto;
+        justify-content: none;
 
         .logo {
           color: white;
@@ -322,7 +322,7 @@
           font-family: 'Shrikhand', cursive; /* Utilisation de la police Shrikhand */
           font-style: italic; /* Style italic */
           position: relative;
-          right: 5%;
+          width: 200px;
 
           a {
             color: white;
@@ -336,12 +336,9 @@
         ul {
           list-style: none;
           display: flex;
-          padding-right: 0;
           order: 1;
-          padding-right: 0;
-          order: 1;
-          position: relative;
-          right: 10%;
+        
+          
       
           li {
             a {

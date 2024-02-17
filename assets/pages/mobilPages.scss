@@ -132,13 +132,13 @@
         background-color: #f2f2f2;
         width: 100%;
         z-index: 2;
-
         position: relative;
-        margin-top: -14px;
-
+        top: 14%;
+        margin-bottom: -16px;
         .card {
           .menu__block {
             margin: 10px;
+            margin-top: -1px;
 
             .category {
               .category__name {
@@ -170,12 +170,12 @@
             }
 
             .choice {
-              margin-bottom: 92px;
+              margin-bottom: 32px;
           
               .choice__card {
                 width: 98%;
                 background-color: white;
-                border-radius: 30px;
+                border-radius: 15px;
                 margin-top: 20px;
                 display: flex;
                 position: relative;
@@ -214,7 +214,7 @@
                 .prix {
                   @include flex-center;
                   font-weight: bold;
-                  padding: 0 0.5rem 0.5rem 0;
+                  padding: 0 15px 15px 0;
                   transition: transform 0.9s;
                   margin-left: auto;
                   transform-origin: left center;
@@ -235,7 +235,7 @@
                   font-weight: bold;
                   font-size: 100%;
                   align-items: center;
-                  border-radius: 0 2rem 2rem 0;
+                  border-radius: 0 15px 15px 0;
                   width: 57px;
                   height: 100%;
                   margin-left: -1rem;
@@ -292,32 +292,27 @@
 
         }
 
-
         .button-restaurant {
           display: flex;
           justify-content: center;
           align-items: center;
           text-decoration: none;
-          margin: 0 auto;
-        
+          margin: 0 auto;  
           border-radius: 2rem;
           border: none;
           width: 255px;
           font-size: 100%;
           color: white;
           font-weight: bold;
-          height: 55px;
-     
+          height: 55px;  
           background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
-          position: relative;
-          top: -44px;
-        
+          position: relative;        
+          bottom: 13px;
           &:hover {
             background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
             
           }
         }
-        
       }
 
       footer {

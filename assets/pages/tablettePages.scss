@@ -40,7 +40,7 @@ body {
             padding-top: 9px;
             font-size: 100%;
             display: flex;
-            margin-left: 30%;
+            margin-left: 47%;
             margin-bottom: 5px;
           }
         }
@@ -175,12 +175,12 @@ body {
           }
 
           .choice {
-            margin-bottom: 92px;
+            margin-bottom: 32px;
           
             .choice__card {
               width: 85%;
               background-color: white;
-              border-radius: 30px;
+              border-radius: 15px;
               margin-top: 20px;
               display: flex;
               position: relative;
@@ -236,8 +236,8 @@ body {
                 font-weight: bold;
                 font-size: 100%;
                 align-items: center;
-                border-radius: 0 2rem 2rem 0;
-                width: 57px;
+                border-radius: 0 15px 15px 0;
+                width: 47px;            
                 height: 100%;
                 position: absolute;
                 left: 93%; // Ajuste cette valeur si nécessaire
@@ -316,7 +316,7 @@ body {
         padding: 6px 20px;
         background: linear-gradient(to top, #9356dc 0%, #ff79da 100%);
         position: relative;
-        top: -44px;
+        top: -15px;
 
         &:hover {
           cursor: pointer;
