@@ -319,7 +319,7 @@
   }
   body #container .restaurants .restaurants_title {
     position: relative;
-    left: 5%;
+    left: 1%;
     font-size: 2rem;
     font-weight: bold;
   }
