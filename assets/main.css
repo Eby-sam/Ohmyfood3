@@ -862,6 +862,8 @@
   body #container .functionning ul li {
     position: relative;
     padding-right: 18px;
+    width: 42%;
+    margin-left: 8px;
   }
   body #container .functionning ul li .button {
     position: relative;
