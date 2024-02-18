@@ -19,6 +19,7 @@
             #imgTitle {
               margin-bottom: 25px;
               text-align: center;
+              width: 36%;
             }
           }
         }
@@ -126,8 +127,8 @@
           li {
             position: relative;
             padding-right: 18px;
-            width: 42%;
-            margin-left: 8px;
+            width: 38%;
+
 
             .button {
               position: relative;
@@ -197,8 +198,8 @@
 
         .restaurants_title {
           
-          font-size: 150%;
-          margin-right: 80%;
+          font-size: 120%;
+          margin-right: 56%;
           padding-bottom: 11px;
           padding-top: 17px;
 
@@ -212,6 +213,7 @@
           flex-wrap: wrap;
           justify-content: space-evenly;
           width: 100%;
+          margin: 0;
 
           .restaurants__card {
             box-sizing: border-box;

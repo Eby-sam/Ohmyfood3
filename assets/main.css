@@ -780,6 +780,7 @@
   body #container .title .head .logo #imgTitle {
     margin-bottom: 25px;
     text-align: center;
+    width: 36%;
   }
   body #container .title .location-bar {
     background-color: #EAEAEA;
@@ -862,8 +863,7 @@
   body #container .functionning ul li {
     position: relative;
     padding-right: 18px;
-    width: 42%;
-    margin-left: 8px;
+    width: 38%;
   }
   body #container .functionning ul li .button {
     position: relative;
@@ -920,8 +920,8 @@
     width: 100%;
   }
   body #container .restaurants .restaurants_title {
-    font-size: 150%;
-    margin-right: 80%;
+    font-size: 120%;
+    margin-right: 56%;
     padding-bottom: 11px;
     padding-top: 17px;
   }
@@ -930,6 +930,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
+    margin: 0;
   }
   body #container .restaurants .restaurants_container .restaurants__card {
     box-sizing: border-box;
